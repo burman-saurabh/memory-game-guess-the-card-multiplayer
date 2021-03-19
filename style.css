@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#dashboard {
+    background-color: grey;
+    width: 100%;
+}
+
+#displaybox {
+    background-color: black;
+    width: 100%;
+}
+
+#cardwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.playcard {
+    display: inline-block;
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+    position: relative;
+    perspective: 400;
+    -webkit-perspective: 400;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: all 1s ease;
+    border-radius: 10px;
+}
+
+/* .playcard:hover{
+    transform: rotateY(180deg);
+} */
+
+.frontface {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.backface {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    bottom: 200px;
+    transform: rotateY(180deg);
+}
+
+.frontface,
+.backface {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.frontface img {
+    height: 100%;
+    width: 100%;
+}
+
+.backface img {
+    height: 100%;
+    width: 100%;
+}
+
+#gameOver {
+    position: absolute;
+    height: auto;
+    width: auto;
+    background-color: green;
+    opacity: 0.1;
+    z-index: 2;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    transition: all 1s ease;
+    text-align: center;
+    visibility: hidden;
+}
+
+.show {
+    opacity: 0.9 !important;
+    transform: translateX(-50%) translateY(-50%) scale(1) !important;
+    visibility: visible !important;
+}
+
+#getSetGo {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: 0.9;
+    z-index: 2;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#playerDetails {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    z-index: 3;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 200px;
+
+}
+
+#players {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 4;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 20%;
+}
+
+input {
+    padding: 8px;
+    display: block;
+    width: 300px;
+    border-radius: 6px;
+    margin: 6px auto;
+    border: solid black 1px;
+    font-weight: 600;
+}
+
+button {
+    padding: 12px;
+    display: block;
+    width: 400px;
+    border-radius: 6px;
+    margin: 20px auto;
+    border: solid black 1px;
+    font-weight: 600;
+}
